@@ -7,7 +7,7 @@ $nama = "Rifaldi";
 
 
 <div class="hero-section">
-    <img src="https://ik.imagekit.io/3fgrgeqi6z/Saya.jpg?updatedAt=1751528408171" class="hero-photo" alt="Foto Saya">
+    <img src="https://ik.imagekit.io/3fgrgeqi6z/sayapixeol2.jpg" class="hero-photo" alt="Foto Saya">
 
 
     <div class="hero-text">
