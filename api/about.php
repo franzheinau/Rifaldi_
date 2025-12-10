@@ -22,7 +22,7 @@ include __DIR__ . '/../includes/header.php';
 <table class="info-table">
     <tr>
         <th>Nama</th>
-        <td>[Nama Kamu]</td>
+        <td><?php echo $nama; ?></td>
     </tr>
     <tr>
         <th>Fokus</th>
