@@ -1,12 +1,22 @@
 <?php
 if (!isset($pageTitle)) {
-    $pageTitle = "Portfolio-Rifaldi";
+    $pageTitle = "Portfolio";
 }
 if (!isset($activePage)) {
     $activePage = "";
 }
-$nama = "Rifaldi";
-$namasub = "Web Developer";
+
+/**
+ * BASE URL
+ * - Di Vercel: kosong "" (karena project ada di root domain)
+ * - Di localhost: isi dengan "/nama-folder-project"
+ */
+$baseURL = "";
+
+// Kalau di localhost dan project ada di dalam folder, isi otomatis:
+if (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false) {
+    $baseURL = "/portfolio-rifaldi"; // ganti sesuai nama folder di htdocs kamu
+}
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -14,8 +24,12 @@ $namasub = "Web Developer";
     <meta charset="UTF-8">
     <title><?= htmlspecialchars($pageTitle) ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="<?= $baseURL ?>/assets/css/style.css">
     <script src="/assets/js/main.js" defer></script>
 </head>
 <body>

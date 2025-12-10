@@ -7,7 +7,8 @@ $nama = "Rifaldi";
 
 
 <div class="hero-section">
-    <img src="/portfolio-rifaldi/assets/img/saya.jpg" class="hero-photo" alt="Foto Saya">
+    <img src="<?= $baseURL ?>/assets/img/saya.jpg" class="hero-photo" alt="Foto Saya">
+
 
     <div class="hero-text">
         <p class="hero-label">Web Developer • PHP Enthusiast</p>
