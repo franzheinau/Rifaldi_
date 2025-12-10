@@ -16,12 +16,12 @@ include __DIR__ . '/../includes/header.php';
         <h3>Info Kontak</h3>
         <p>Email: <a href="mailto:rifaldi0823666@gmail.com">rifaldi0823666@gmail.com</a></p>
         <p>GitHub: <a href="https://github.com/franzheinau" target="_blank">github.com/franzheinau</a></p>
-        <p>stackoverflow <a href="https://stackoverflow.com/users/32024670/kr%c3%b6ner-hass" target="_blank">Username: stackoverflow</a></p>
+        <p>stackoverflow <a href="https://stackoverflow.com/users/32024670/kr%c3%b6ner-hass" target="_blank">Korner: stackoverflow</a></p>
     </div>
 
     <div class="contact-form-box">
-        <h3>Form Kontak (contoh)</h3>
-        <form onsubmit="return fakeSendMessage();">
+        <h3>Form Kontak</h3>
+        <form method="POST" action="<?= $baseURL ?>/api/send.php">
             <label for="name">Nama:</label>
             <input type="text" id="name" name="name">
 
@@ -32,9 +32,6 @@ include __DIR__ . '/../includes/header.php';
             <textarea id="message" name="message" rows="4"></textarea>
 
             <button type="submit">Kirim Pesan</button>
-            <p class="form-note">
-                *Form ini hanya contoh di sisi frontend. Silakan kirim email langsung untuk benar-benar menghubungi saya.
-            </p>
         </form>
     </div>
 </div>
