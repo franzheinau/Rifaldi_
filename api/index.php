@@ -11,7 +11,7 @@ $nama = "Rifaldi";
 
 
     <div class="hero-text">
-        <p class="hero-label">Web Developer • PHP Enthusiast</p>
+        <p class="hero-label">Web Developer • Write Code Enthusiast</p>
         <h2>Halo, saya <?php echo $nama; ?> </h2>
         <p>
             Selamat datang di portfolio pribadi saya.  
@@ -26,7 +26,7 @@ $nama = "Rifaldi";
 
         <ul class="hero-list">
             <li>Fokus pada web sederhana & cepat diakses.</li>
-            <li>Suka eksplorasi PHP Native dan basic JS.</li>
+            <li>Suka eksplorasi PHP dan Go.</li>
             <li>Belajar konsisten dan menulis kode yang rapi.</li>
         </ul>
     </div>
@@ -56,7 +56,7 @@ $nama = "Rifaldi";
         <table class="info-table">
             <tr>
                 <th>Nama :</th>
-                <td>Rifaldi;</td>
+                <td><?php echo $nama; ?>;</td>
             </tr>
             <tr>
                 <th>Fokus :</th>
@@ -77,10 +77,12 @@ $nama = "Rifaldi";
 <div class="section-card tech-section">
     <h3>Tech Stack yang sering saya pakai</h3>
     <div class="badge-row">
-        <span class="badge">PHP Native</span>
-        <span class="badge">HTML klasik</span>
-        <span class="badge">CSS dasar</span>
-        <span class="badge">JavaScript dasar</span>
+        <span class="badge">PHP</span>
+        <span class="badge">HTML</span>
+        <span class="badge">CSS </span>
+        <span class="badge">JavaScript </span>
+        <span class="badge">Go </span>
+        <span class="badge">C++ </span>
     </div>
 </div>
 

@@ -6,7 +6,7 @@ include __DIR__ . '/../includes/header.php';
 // contoh data project (boleh diambil dari DB juga nanti)
 $projects = [
     [
-        'name' => 'Profile Komunitas',
+        'name' => 'Profile Komunitas Baca',
         'year' => '2023',
         'desc' => 'Website profil Komunitas Kecil, tampilan sederhana dengan beberapa halaman statis.',
         'link' => 'https://www.pthreesmada.my.id/'

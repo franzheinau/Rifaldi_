@@ -19,6 +19,8 @@ $namasub = "Web Developer";
     <script src="/assets/js/main.js" defer></script>
 </head>
 <body>
+    <div class="body-bg"></div>
+<div class="page-wrapper">
 <div class="page-wrapper">
     <header class="site-header">
         <div class="site-title">
