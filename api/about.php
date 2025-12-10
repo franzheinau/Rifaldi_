@@ -1,13 +1,14 @@
 <?php
 $pageTitle  = "About - Portfolio Saya";
 $activePage = "about";
+$nama = "Rifaldi";
 include __DIR__ . '/../includes/header.php';
 ?>
 <a id="top"></a>
 <h2>About Me</h2>
 
 <p>
-    Halo, nama saya [Nama Kamu]. Saya mulai belajar pemrograman web dengan 
+    Halo, nama saya <?php echo $nama; ?>. Saya mulai belajar pemrograman web dengan 
     PHP native, HTML, dan CSS yang sederhana, seperti website-website 
     lama di awal tahun 2000-an.
 </p>
