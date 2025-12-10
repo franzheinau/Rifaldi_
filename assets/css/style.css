@@ -1,40 +1,71 @@
 
+
 :root {
-    --font-main: "Georgia", serif;
-    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular,
+    --font-main: "JetBrains Mono", ui-monospace, SFMono-Regular,
         Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+    --bg-body: #0c8dab88;
+    --bg-body-mobile: #e5e5e5;
+    --bg-card: #ffffff;
+    --bg-soft: #f5f7fb;
+    --border-soft: #cbd5e1;
+    --border-strong: #94a3b8;
+    --accent: #0f499b;
+    --accent-soft: #e0ecff;
+    --text-main: #1f2933;
+    --text-muted: #6b7280;
 }
 
-
-h1, h2, h3 {
-    font-family: var(--font-mono);
+* {
+    box-sizing: border-box;
 }
-
-
-p, li {
-    font-family: var(--font-main);
-}
-
-
 
 body {
     margin: 0;
     padding: 0;
-    font-family: "Georgia", serif;
-    background-color: #0c8dab88;
-    color: #333;
+    font-family: var(--font-main);
+    background-color: var(--bg-body);
+    color: var(--text-main);
 }
+
+/* ===============================
+   Layout
+   =============================== */
 
 .page-wrapper {
     max-width: 900px;
     width: 100%;
     margin: 20px auto;
-    background: #ffffff;
+    background: var(--bg-card);
     border: 1px solid #bbbbbb;
     box-shadow: 0 0 12px rgba(0,0,0,0.15);
     padding: 20px 18px;
 }
 
+/* ===============================
+   Typography
+   =============================== */
+
+h1, h2, h3 {
+    font-family: var(--font-main);
+    font-weight: 700;
+}
+
+p, li {
+    font-family: var(--font-main);
+    font-weight: 400;
+}
+
+.content h2 {
+    margin-top: 0;
+    font-size: 26px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+/* ===============================
+   Header & Navigation
+   =============================== */
 
 .site-header {
     border-bottom: 2px solid #ccc;
@@ -51,9 +82,8 @@ body {
 .site-subtitle {
     margin-top: 5px;
     font-size: 15px;
-    color: #666;
+    color: var(--text-muted);
 }
-
 
 .site-nav ul {
     list-style: none;
@@ -69,16 +99,19 @@ body {
 .site-nav a {
     text-decoration: none;
     padding: 6px 10px;
-    border-radius: 4px;
+    border-radius: 999px;
     font-size: 14px;
     border: 1px solid transparent;
-    color: #003366;
+    color: var(--accent);
+    transition: background-color 0.15s ease, border-color 0.15s ease,
+        color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .site-nav a.active {
-    background: #e6eefc;
+    background: var(--accent-soft);
     border: 1px solid #99b3e6;
-    font-weight: bold;
+    font-weight: 600;
+    box-shadow: 0 0 0 1px rgba(148,163,233,0.4);
 }
 
 .site-nav a:hover {
@@ -86,7 +119,9 @@ body {
     border-color: #99b3e6;
 }
 
-
+/* ===============================
+   Hero
+   =============================== */
 
 .hero-section {
     display: flex;
@@ -96,12 +131,13 @@ body {
     background: #f4f4f4;
     border: 1px solid #cfcfcf;
     padding: 20px;
+    border-radius: 10px;
 }
 
 .hero-photo {
     width: 150px;
     height: 150px;
-    border-radius: 8px;
+    border-radius: 12px;
     border: 2px solid #888;
     background: #eee;
     object-fit: cover;
@@ -119,49 +155,9 @@ body {
     line-height: 1.6;
 }
 
-
-
-.content h2 {
-    margin-top: 0;
-    font-size: 26px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 5px;
-}
-
-.section-card {
-    background: #fafafa;
-    border: 1px solid #cfcfcf;
-    padding: 15px;
-    margin: 15px 0;
-    border-radius: 6px;
-}
-
-.section-card h3 {
-    margin-top: 0;
-}
-
-ul {
-    margin-top: 10px;
-}
-
-
-.site-footer {
-    border-top: 1px solid #c7c7c7;
-    margin-top: 30px;
-    padding-top: 10px;
-    text-align: center;
-    font-size: 13px;
-    color: #555;
-}
-
-.back-to-top a {
-    font-size: 13px;
-    color: #003366;
-}
-
 .hero-label {
     font-size: 12px;
-    color: #666;
+    color: var(--text-muted);
     font-style: italic;
     margin-bottom: 6px;
 }
@@ -174,26 +170,32 @@ ul {
 .btn-primary,
 .btn-ghost {
     display: inline-block;
-    padding: 6px 12px;
+    padding: 6px 14px;
     font-size: 13px;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 999px;
     margin-right: 8px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease,
+        border-color 0.15s ease, box-shadow 0.15s ease, transform 0.1s ease;
 }
 
 .btn-primary {
-    background-color: #003366;
+    background-color: var(--accent);
     color: #ffffff;
-    border: 1px solid #00264d;
+    border-color: #00264d;
+    box-shadow: 0 4px 8px rgba(15,76,129,0.3);
 }
 
 .btn-primary:hover {
-    background-color: #004b99;
+    background-color: #1559b3;
+    transform: translateY(-1px);
 }
 
 .btn-ghost {
     background-color: #f8f8f8;
-    color: #003366;
+    color: var(--accent);
     border: 1px solid #c0c0c0;
 }
 
@@ -208,6 +210,25 @@ ul {
     color: #444;
 }
 
+/* ===============================
+   Cards & Sections
+   =============================== */
+
+.section-card {
+    background: #fafafa;
+    border: 1px solid #cfcfcf;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+}
+
+.section-card h3 {
+    margin-top: 0;
+}
+
+ul {
+    margin-top: 10px;
+}
 
 .home-columns {
     display: flex;
@@ -223,7 +244,8 @@ ul {
     margin-top: 6px;
 }
 
-/* tech badges */
+/* Tech badges */
+
 .tech-section {
     margin-top: 18px;
 }
@@ -247,18 +269,135 @@ ul {
     border-color: #b3c3f0;
 }
 
+/* ===============================
+   Contact & Forms (dibikin lebih modern)
+   =============================== */
 
-@media (max-width: 800px) {
-    .home-columns {
-        flex-direction: column;
-    }
+.contact-layout {
+    display: flex;
+    gap: 18px;
+    margin-top: 18px;
+    align-items: flex-start;
 }
 
-/* ========== Responsive Layout ========== */
+.contact-info-box,
+.contact-form-box {
+    flex: 1;
+    background-color: var(--bg-soft);
+    border: 1px solid var(--border-soft);
+    border-radius: 10px;
+    padding: 14px 16px;
+}
+
+.contact-info-box h3,
+.contact-form-box h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.contact-info-box p {
+    margin: 4px 0;
+    font-size: 14px;
+}
+
+.contact-info-box a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.contact-info-box a:hover {
+    text-decoration: underline;
+}
+
+/* Form elements */
+
+.contact-form-box form {
+    display: grid;
+    gap: 8px;
+}
+
+.contact-form-box label {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.contact-form-box input[type="text"],
+.contact-form-box input[type="email"],
+.contact-form-box textarea {
+    width: 100%;
+    padding: 7px 9px;
+    font-size: 13px;
+    border-radius: 6px;
+    border: 1px solid var(--border-soft);
+    background-color: #ffffff;
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease,
+        background-color 0.15s ease;
+}
+
+.contact-form-box textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.contact-form-box input[type="text"]:focus,
+.contact-form-box input[type="email"]:focus,
+.contact-form-box textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 1px rgba(37,99,235,0.25);
+    background-color: #f9fbff;
+}
+
+.contact-form-box button[type="submit"] {
+    margin-top: 6px;
+    align-self: flex-start;
+    background-color: var(--accent);
+    color: #ffffff;
+    border: 1px solid #0b3a82;
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, transform 0.1s ease,
+        box-shadow 0.15s ease;
+}
+
+.contact-form-box button[type="submit"]:hover {
+    background-color: #1559b3;
+    box-shadow: 0 4px 10px rgba(37,99,235,0.35);
+    transform: translateY(-1px);
+}
+
+/* ===============================
+   Footer
+   =============================== */
+
+.site-footer {
+    border-top: 1px solid #c7c7c7;
+    margin-top: 30px;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 13px;
+    color: #555;
+}
+
+.back-to-top a {
+    font-size: 13px;
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.back-to-top a:hover {
+    text-decoration: underline;
+}
+
+/* ===============================
+   Responsive
+   =============================== */
 
 @media (max-width: 800px) {
     body {
-        background-color: #e5e5e5;
+        background-color: var(--bg-body-mobile);
     }
 
     .page-wrapper {
@@ -270,7 +409,6 @@ ul {
         padding: 15px 12px;
     }
 
-    /* Nav jadi rata tengah & gampang di-tap */
     .site-nav ul {
         display: flex;
         flex-wrap: wrap;
@@ -286,7 +424,6 @@ ul {
         padding: 5px 10px;
     }
 
-    /* Hero stack: foto di atas, teks di bawah */
     .hero-section {
         flex-direction: column;
         align-items: flex-start;
@@ -319,31 +456,31 @@ ul {
         padding: 6px 10px;
     }
 
-    /* Kolom home jadi satu kolom */
     .home-columns {
         flex-direction: column;
     }
 
-    /* Tabel info biar nggak mepet */
     .info-table th,
     .info-table td {
         font-size: 13px;
         padding: 5px 6px;
     }
 
-    /* Badge tech stack lebih rapat */
     .badge {
         font-size: 11px;
         padding: 3px 7px;
     }
 
-    /* Judul & paragraf sedikit mengecil */
     h2 {
         font-size: 20px;
     }
 
     .content p {
         font-size: 14px;
+    }
+
+    .contact-layout {
+        flex-direction: column;
     }
 }
 
