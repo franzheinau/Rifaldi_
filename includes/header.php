@@ -31,8 +31,10 @@ $namasub = "Web Developer";
             <ul>
                 <li><a href="/"        class="<?= $activePage === 'home' ? 'active' : '' ?>">Home</a></li>
                 <li><a href="/about"   class="<?= $activePage === 'about' ? 'active' : '' ?>">About</a></li>
+                <li><a href="/blog" class="<?= $activePage === 'blog' ? 'active' : '' ?>">Blog</a></li>
                 <li><a href="/projects" class="<?= $activePage === 'projects' ? 'active' : '' ?>">Projects</a></li>
                 <li><a href="/contact" class="<?= $activePage === 'contact' ? 'active' : '' ?>">Contact</a></li>
+                
             </ul>
         </nav>
     </header>

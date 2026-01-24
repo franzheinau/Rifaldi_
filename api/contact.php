@@ -11,7 +11,7 @@ $status = $_GET['status'] ?? null;
 
 <p>
     Untuk kerja sama atau pertanyaan, kamu bisa menghubungi saya 
-    lewat email atau form di bawah ini ( ADA KENDALA DI FORMNYA SILAHKAN PAKAI EMAIL LANGSUNG SAJA!!).
+    lewat email atau form di bawah ini.
 </p>
 
 <?php if ($status === 'ok'): ?>

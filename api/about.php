@@ -21,15 +21,15 @@ include __DIR__ . '/../includes/header.php';
 
 <table class="info-table">
     <tr>
-        <th>Nama</th>
+        <th>Nama:</th>
         <td><?php echo $nama; ?></td>
     </tr>
     <tr>
-        <th>Fokus</th>
+        <th>Fokus:</th>
         <td>Web Development</td>
     </tr>
     <tr>
-        <th>Bahasa</th>
+        <th>Bahasa:</th>
         <td>Indonesia, Inggris (basic)</td>
     </tr>
 </table>
