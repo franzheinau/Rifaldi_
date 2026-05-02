@@ -16,6 +16,7 @@ $namasub = "Web Developer";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets/img/imagelogo.ico" type="image/x-icon">
 <link rel="stylesheet" href="../assets/css/style.css">
 <script src="/assets/js/main.js" defer></script>
 </head>
