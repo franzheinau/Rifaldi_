@@ -126,7 +126,7 @@ $namasub = "Web Developer";
             <nav class="site-nav">
                 <a href="/"         class="<?= $activePage === 'home'     ? 'active' : '' ?>">[ HOME ]</a>
                 <a href="/about"    class="<?= $activePage === 'about'    ? 'active' : '' ?>">[ ABOUT ]</a>
-                <a href="/blog"     class="<?= $activePage === 'blog'     ? 'active' : '' ?>">[ BLOG ]</a>
+                <!-- <a href="/blog"     class="<?= $activePage === 'blog'     ? 'active' : '' ?>">[ BLOG ]</a> -->
                 <a href="/projects" class="<?= $activePage === 'projects' ? 'active' : '' ?>">[ PROJECTS ]</a>
                 <a href="/contact"  class="<?= $activePage === 'contact'  ? 'active' : '' ?>">[ CONTACT ]</a>
             </nav>
