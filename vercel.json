@@ -10,6 +10,7 @@
     { "src": "^/projects$", "dest": "/api/projects.php" },
     { "src": "^/contact$", "dest": "/api/contact.php" },
     { "src": "^/assets/(.*)$", "dest": "/assets/$1" },
-    { "src": "^/blog$", "dest": "/api/blog.php" }
+    { "src": "^/blog$", "dest": "/api/blog.php" },
+    { "src": "^/send-email$", "dest": "/api/send-email.php" }
   ]
 }

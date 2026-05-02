@@ -1,57 +1,64 @@
 <?php
-$pageTitle  = "Contact - Portfolio Saya";
+$pageTitle  = "Contact - Portfolio Rifaldi";
 $activePage = "contact";
 include __DIR__ . '/../includes/header.php';
 
-// baca status dari URL (?status=...)
 $status = $_GET['status'] ?? null;
 ?>
-<a id="top"></a>
-<h2>Contact</h2>
 
-<p>
-    Untuk kerja sama atau pertanyaan, kamu bisa menghubungi saya 
-    lewat email atau form di bawah ini.
-</p>
+<div class="section-title">CONTACT</div>
+
+<div class="section-card" style="margin-bottom:16px;">
+    <p>Untuk kerja sama atau pertanyaan, kamu bisa menghubungi saya lewat email atau form di bawah ini.</p>
+</div>
 
 <?php if ($status === 'ok'): ?>
-    <p style="color: green; margin-top: 5px;">
-        Pesan berhasil dikirim. Terima kasih! 😊
-    </p>
+<div class="status-msg status-ok">▸ Pesan berhasil dikirim. Terima kasih!</div>
 <?php elseif ($status === 'empty'): ?>
-    <p style="color: red; margin-top: 5px;">
-        Semua field wajib diisi.
-    </p>
+<div class="status-msg status-err">▸ Semua field wajib diisi.</div>
 <?php elseif ($status === 'fail'): ?>
-    <p style="color: red; margin-top: 5px;">
-        Gagal mengirim pesan. Coba lagi beberapa saat, atau kirim email langsung.
-    </p>
+<div class="status-msg status-err">▸ Gagal mengirim pesan. Coba lagi atau kirim email langsung.</div>
 <?php endif; ?>
 
 <div class="contact-layout">
     <div class="contact-info-box">
-        <h3>Info Kontak</h3>
-        <p>Email: <a href="mailto:rifaldi0823666@gmail.com">rifaldi0823666@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/franzheinau" target="_blank">github.com/franzheinau</a></p>
-        <p>stackoverflow <a href="https://stackoverflow.com/users/32024670/kr%c3%b6ner-hass" target="_blank">Korner: stackoverflow</a></p>
+        <h3>▸ INFO KONTAK</h3>
+        <div class="contact-info-row">
+            <span class="contact-label">EMAIL</span>
+            <a href="mailto:rifaldi0823666@gmail.com">rifaldi0823666@gmail.com</a>
+        </div>
+        <div class="contact-info-row">
+            <span class="contact-label">GITHUB</span>
+            <a href="https://github.com/franzheinau" target="_blank">github.com/franzheinau</a>
+        </div>
+        <div class="contact-info-row">
+            <span class="contact-label">STACK</span>
+            <a href="https://stackoverflow.com/users/32024670/kr%c3%b6ner-hass" target="_blank">stackoverflow/kroner</a>
+        </div>
+        <div class="contact-status-box">
+            <span class="online-dot"></span>
+            <span>STATUS: OPEN FOR COLLAB</span>
+        </div>
     </div>
 
     <div class="contact-form-box">
-        <h3>Form Kontak</h3>
-        <form method="POST" action="<?= $baseURL ?>/api/send.php">
-            <label for="name">Nama:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Pesan:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-
-            <button type="submit">Kirim Pesan</button>
+        <h3>▸ FORM KONTAK</h3>
+        <form method="POST" action="/api/send.php">
+            <div class="form-group">
+                <label for="name">NAMA</label>
+                <input type="text" id="name" name="name" placeholder="Nama kamu..." required>
+            </div>
+            <div class="form-group">
+                <label for="email">EMAIL</label>
+                <input type="email" id="email" name="email" placeholder="email@kamu.com" required>
+            </div>
+            <div class="form-group">
+                <label for="message">PESAN</label>
+                <textarea id="message" name="message" rows="4" placeholder="Tulis pesanmu di sini..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary" style="margin-top:4px;">▶ KIRIM PESAN</button>
         </form>
     </div>
 </div>
 
-<?php
-include __DIR__ . '/../includes/footer.php';
+<?php include __DIR__ . '/../includes/footer.php'; ?>
