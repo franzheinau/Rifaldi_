@@ -2,7 +2,7 @@
 
     <footer class="site-footer">
         <div class="footer-art">▓▒░ ░▒▓</div>
-        <p>&copy; <?= date('Y') ?> <?= strtoupper($nama ?? 'RIFALDI') ?>.DEV — BUILT WITH PHP &amp; PIXEL LOVE</p>
+        <p>&copy; <?= date('Y') ?> <?= strtoupper($nama ?? 'RIFALDI') ?>.My.id</p>
         <p style="margin-top:6px;">
             <a href="#" id="backToTop" style="color:#4a2c6e; text-decoration:none; font-family:var(--pixel); font-size:7px; letter-spacing:1px;">▲ BACK TO TOP ▲</a>
         </p>
